@@ -1,0 +1,40 @@
+package com.exceptional.StudentManager.controllers;
+
+import com.exceptional.StudentManager.dtos.StudentDTO;
+import com.exceptional.StudentManager.services.StudentService;
+import jakarta.websocket.server.PathParam;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping(path = "/students")
+public class StudentController {
+
+    final StudentService studentService;
+
+    public StudentController(StudentService studentService) {
+        this.studentService = studentService;
+    }
+
+    @GetMapping(path = "/{id}")
+    public StudentDTO getStudentById(@PathVariable("id") long studentId) {
+        return studentService.getStudentById(studentId);
+    }
+
+    @GetMapping(path = "/all")
+    public List<StudentDTO> getAllStudent() {
+        return studentService.getAllStudent();
+    }
+
+    @PostMapping
+    public StudentDTO registerStudent(@RequestBody StudentDTO studentDTO) {
+        return studentService.registerStudent(studentDTO);
+    }
+
+    @DeleteMapping(path = "/{id}")
+    public void deleteStudentById(@PathVariable("id") long studentId) {
+        studentService.deleteStudentById(studentId);
+    }
+
+}

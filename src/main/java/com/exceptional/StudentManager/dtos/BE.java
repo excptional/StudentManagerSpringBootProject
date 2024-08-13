@@ -3,6 +3,7 @@ package com.exceptional.StudentManager.dtos;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.w3c.dom.Text;
 
 import java.time.Year;
 
@@ -10,25 +11,25 @@ import java.time.Year;
 @AllArgsConstructor
 @NoArgsConstructor
 public class BE {
-    private Double be_sgpa_sem1;
-    private Double be_sgpa_sem2;
-    private Double be_sgpa_sem3;
-    private Double be_sgpa_sem4;
-    private Double be_sgpa_sem5;
-    private Double be_sgpa_sem6;
-    private Double be_sgpa_sem7;
-    private Double be_sgpa_sem8;
-    private Double be_cgpa;
-    private Double be_pct_sem1;
-    private Double be_pct_sem2;
-    private Double be_pct_sem3;
-    private Double be_pct_sem4;
-    private Double be_pct_sem5;
-    private Double be_pct_sem6;
-    private Double be_pct_sem7;
-    private Double be_pct_sem8;
-    private Double be_opct;
-    private Year yop_be;
-    private Long backlogs;
+    private String be_sgpa_sem1;
+    private String be_sgpa_sem2;
+    private String be_sgpa_sem3;
+    private String be_sgpa_sem4;
+    private String be_sgpa_sem5;
+    private String be_sgpa_sem6;
+    private String be_sgpa_sem7;
+    private String be_sgpa_sem8;
+    private String be_cgpa;
+    private String be_pct_sem1;
+    private String be_pct_sem2;
+    private String be_pct_sem3;
+    private String be_pct_sem4;
+    private String be_pct_sem5;
+    private String be_pct_sem6;
+    private String be_pct_sem7;
+    private String be_pct_sem8;
+    private String be_opct;
+    private String yop_be;
+    private String backlogs;
     private String back_papers;
 }

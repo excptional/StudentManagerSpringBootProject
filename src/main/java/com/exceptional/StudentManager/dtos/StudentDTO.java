@@ -3,6 +3,7 @@ package com.exceptional.StudentManager.dtos;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.w3c.dom.Text;
 
 import java.net.URL;
 import java.time.LocalDate;
@@ -20,7 +21,7 @@ public class StudentDTO {
     private String roll_no;
     private String registration_no;
     private String dept;
-    private LocalDate dob;
+    private String dob;
     private String sex;
     private String course_type;
 
@@ -29,8 +30,8 @@ public class StudentDTO {
     private BE be;
 
     private String pref_job_roles;
-    private Boolean prof_exp;
-    private URL linked_in;
-    private URL github;
-    private URL resume;
+    private String prof_exp;
+    private String linked_in;
+    private String github;
+    private String resume;
 }

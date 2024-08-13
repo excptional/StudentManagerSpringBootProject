@@ -2,9 +2,7 @@ package com.exceptional.StudentManager.controllers;
 
 import com.exceptional.StudentManager.dtos.StudentDTO;
 import com.exceptional.StudentManager.services.StudentService;
-import jakarta.websocket.server.PathParam;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -17,9 +15,9 @@ public class StudentController {
         this.studentService = studentService;
     }
 
-    @GetMapping(path = "/{id}")
-    public StudentDTO getStudentById(@PathVariable("id") long studentId) {
-        return studentService.getStudentById(studentId);
+    @GetMapping(path = "/{rollNo}")
+    public StudentDTO getStudentById(@PathVariable("rollNo") String rollNo) {
+        return studentService.getStudentByRollNo(rollNo);
     }
 
     @GetMapping(path = "/all")

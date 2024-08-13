@@ -7,7 +7,6 @@ import com.exceptional.StudentManager.dtos.StudentDTO;
 import com.exceptional.StudentManager.entities.StudentEntity;
 import com.exceptional.StudentManager.repos.StudentRepository;
 import org.springframework.stereotype.Service;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,8 +21,8 @@ public class StudentService {
         this.studentRepository = studentRepository;
     }
 
-    public StudentDTO getStudentById(long id) {
-        StudentEntity studentEntity = studentRepository.findById(id).get();
+    public StudentDTO getStudentByRollNo(String rollNo) {
+        StudentEntity studentEntity = studentRepository.findByRollNo(rollNo);
         return entityToDTO(studentEntity);
     }
 

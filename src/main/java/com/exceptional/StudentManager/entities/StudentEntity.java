@@ -4,11 +4,6 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.w3c.dom.Text;
-
-import java.net.URL;
-import java.time.LocalDate;
-import java.time.Year;
 
 @Entity
 @Table(name = "student_details")

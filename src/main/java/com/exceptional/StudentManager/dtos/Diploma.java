@@ -3,9 +3,6 @@ package com.exceptional.StudentManager.dtos;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.w3c.dom.Text;
-
-import java.time.Year;
 
 @Data
 @AllArgsConstructor

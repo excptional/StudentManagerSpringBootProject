@@ -3,11 +3,6 @@ package com.exceptional.StudentManager.dtos;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.w3c.dom.Text;
-
-import java.net.URL;
-import java.time.LocalDate;
-import java.time.Year;
 
 @Data //Use for getter() and setter() functions
 @AllArgsConstructor // Use for the constructor

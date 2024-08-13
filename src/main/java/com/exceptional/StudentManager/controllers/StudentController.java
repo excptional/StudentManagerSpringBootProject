@@ -1,6 +1,7 @@
 package com.exceptional.StudentManager.controllers;
 
 import com.exceptional.StudentManager.dtos.StudentDTO;
+import com.exceptional.StudentManager.entities.StudentEntity;
 import com.exceptional.StudentManager.services.StudentService;
 import io.swagger.v3.oas.annotations.Hidden;
 import org.springframework.web.bind.annotation.*;
@@ -30,6 +31,12 @@ public class StudentController {
     @PostMapping
     public StudentDTO registerStudent(@RequestBody StudentDTO studentDTO) {
         return studentService.registerStudent(studentDTO);
+    }
+
+    @Hidden
+    @PostMapping(path = "/all")
+    public List<StudentDTO> registerAllStudent(@RequestBody List<StudentEntity> list) {
+        return studentService.registerAllStudent(list);
     }
 
     @Hidden

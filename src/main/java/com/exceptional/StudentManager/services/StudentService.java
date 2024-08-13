@@ -31,6 +31,18 @@ public class StudentService {
         return entityToDTO(studentRepository.save(studentEntity));
     }
 
+    public List<StudentDTO> registerAllStudent(List<StudentEntity> list1) {
+//        List<StudentEntity> list2 = new ArrayList<>();
+//        for (StudentDTO studentDTO : list1) {
+//            list2.add(dtoToEntity(studentDTO));
+//        }
+        List<StudentDTO> list3 = new ArrayList<>();
+        for (StudentEntity studentEntity : studentRepository.saveAll(list1)) {
+            list3.add(entityToDTO(studentEntity));
+        }
+        return list3;
+    }
+
     public List<StudentDTO> getAllStudent() {
         List<StudentDTO> list = new ArrayList<>();
         for (StudentEntity studentEntity : studentRepository.findAll()) {

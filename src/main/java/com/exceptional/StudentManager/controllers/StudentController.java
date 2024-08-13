@@ -33,7 +33,7 @@ public class StudentController {
         return studentService.registerStudent(studentDTO);
     }
 
-    @Hidden
+//    @Hidden
     @PostMapping(path = "/all")
     public List<StudentDTO> registerAllStudent(@RequestBody List<StudentEntity> list) {
         return studentService.registerAllStudent(list);

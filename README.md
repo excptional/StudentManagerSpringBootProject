@@ -28,7 +28,7 @@ This is a Spring Boot API for managing student data, built to assist in college 
 - **MySQL**: Relational database used to store student data.
 
 ## Project Structure
-```
+```bsh
 StudentManagerSpringBootProject
 ├── src
 │   ├── main
@@ -69,7 +69,7 @@ StudentManagerSpringBootProject
 
 2. **Configure MySQL Database**
    - Create a new database in MySQL named `student_details`.
-   - Configure the database connection in `src/main/resources/application.yml, application-dev.yml, application-prod.yml`.
+   - Configure the database connection in `src/main/resources/application.yml` `src/main/resources/application-dev.yml` `src/main/resources/application-prod.yml`.
 
 3. **Build the Project**
    ```bash
@@ -84,7 +84,7 @@ StudentManagerSpringBootProject
 ## API Endpoints
 
 #### API URL
-```
+```bash
 https://studentmanagerspringbootproject-exceptional.up.railway.app
 ```
 
@@ -99,8 +99,8 @@ https://studentmanagerspringbootproject-exceptional.up.railway.app
 
 ### Example Request
 #### Register Student
+`POST https://studentmanagerspringbootproject-exceptional.up.railway.app/students`
 ```json
-POST https://studentmanagerspringbootproject-exceptional.up.railway.app/students
 {
     "id": 1,
     "email": "example@example.com",
@@ -172,9 +172,7 @@ POST https://studentmanagerspringbootproject-exceptional.up.railway.app/students
 ```
 
 #### Get Student by Roll Number
-```json
-GET https://studentmanagerspringbootproject-exceptional.up.railway.app/students/CSE420
-```
+`GET https://studentmanagerspringbootproject-exceptional.up.railway.app/students/CSE420`
 
 ## Database Configuration
 
